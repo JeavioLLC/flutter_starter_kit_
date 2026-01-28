@@ -4,7 +4,7 @@ import 'core/env/env.dart';
 import 'main.dart';
 
 /// Production config entry point.
-/// Launch with `flutter run --target lib/main_prod.dart`.
+/// Launch with `flutter run --flavor prod --target lib/main_prod.dart`.
 /// 
 /// Example features are registered in main.dart.
 /// To disable example features, comment out their imports and registrations.

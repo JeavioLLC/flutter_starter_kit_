@@ -5,7 +5,7 @@ A production-ready Flutter template that follows Clean Architecture + MVVM. Clon
 ## Architecture Overview
 
 - **Feature-first structure** – every feature ships with `data`, `domain`, and `presentation` layers that own their models, use-cases, repositories, and widgets.
-- **Clean Architecture with MVVM** – `ViewModel`s (ChangeNotifiers) expose immutable state to the UI and orchestrate `UseCase`s.
+- **Clean Architecture (MVVM for UI layer)** – `ViewModel`s (ChangeNotifiers) expose immutable state to the UI and orchestrate `UseCase`s.
 - **Decoupled core** – Core modules never import features. Features depend on core, but core remains feature-agnostic.
 - **Feature-owned routing** – Each feature exposes routes via `FeatureRoute` interface. App router aggregates routes from features.
 - **Feature-owned DI** – Each feature exposes a `register<FeatureName>Feature()` function. Composition happens in `main.dart`.
@@ -50,7 +50,8 @@ lib/
    ```
 4. **Run the app**
    ```bash
-   flutter run
+   flutter run --flavor dev --target lib/main_dev.dart (dev)
+   flutter run --flavor prod --target lib/main_prod.dart (prod)
    ```
 
 ## Development Workflow

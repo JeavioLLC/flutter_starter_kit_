@@ -19,15 +19,15 @@ class ThemeModeSelector extends StatelessWidget {
           segments: const [
             ButtonSegment(
               value: ThemeMode.system,
-              label: Text(AppStrings.themeSystem),
+              label: Text("System"),
             ),
             ButtonSegment(
               value: ThemeMode.light,
-              label: Text(AppStrings.themeLight),
+              label: Text("Light"),
             ),
             ButtonSegment(
               value: ThemeMode.dark,
-              label: Text(AppStrings.themeDark),
+              label: Text("Dark"),
             ),
           ],
           selected: {themeProvider.themeMode},
